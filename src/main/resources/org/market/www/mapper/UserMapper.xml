@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.market.www.mapper.UserMapper">
+    <insert id="insert" parameterType="org.market.www.vo.UserVo">
+        insert into userinfo(id,name,age) values(userinfo_seq.nextval,#{name},#{age})
+    </insert>
+</mapper>
+
+<!-- 
+create table userinfo(
+    id int,
+    name varchar2(255),
+    age int);
+
+create sequence userinfo_seq start with 1 increment by 1 maxvalue 9999;
+
+select * from userinfo;
+
+commit;
+
+
+ -->
